@@ -1,0 +1,40 @@
+{
+  "quiz":[
+{
+  "GameId":"101",
+  "Name": "Entertainment",
+  "Duration": "30 min",
+  "Description": "QUIZ",
+  "Level": "Easy",
+  "image_Url": "https://previews.123rf.com/images/blankstock/blankstock1501/blankstock150101150/35194262-quiz-speech-bubble-sign-icon-questions-and-answers-game-symbol-gray-flat-button-with-shadow-modern-u.jpg",
+  "Geners":"",
+  "topic":"",
+  "Domain":""
+},
+{
+  "GameId":"201",
+  "Name": "Romantic",
+  "Duration": "30 min",
+  "Description": "QUIZ",
+  "Level": "Easy",
+  "image_Url": "https://st3.depositphotos.com/1496387/17432/v/1600/depositphotos_174320100-stock-illustration-quiz-show-game-concept-players.jpg",
+  "Geners":"",
+  "topic":"",
+  "Domain":""
+},
+{
+  "GameId":"301",
+  "Name": "Stand-up Comedy",
+  "Duration": "30 min",
+  "Description": "QUIZ",
+  "Level": "Easy",
+  "image_Url": "https://img.freepik.com/free-vector/checkered-background-with-notebook-game-items_23-2147593456.jpg?size=338&ext=jpg",
+  "Geners":"",
+  "topic":"",
+  "Domain":""
+}
+
+
+  ]
+  
+}

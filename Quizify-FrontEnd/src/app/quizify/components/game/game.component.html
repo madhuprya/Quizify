@@ -1,0 +1,65 @@
+
+<section id="Heading">
+  <mat-chip-list fxLayout="row" fxLayoutAlign="center center">
+    <mat-chip color="primary" selected class="headings">{{
+      category.name
+    }}</mat-chip>
+    <i class="material-icons">arrow_forward_ios</i>
+    <mat-chip color="accent" selected class="headings">{{
+      currentTopic.name
+    }}</mat-chip>
+  </mat-chip-list>
+</section>
+
+<section class="main">
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Enter Name for Game"
+        autocomplete="off"
+        [(ngModel)]="gameName"
+      />
+    </mat-form-field>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Enter Genre for Game"
+      autocomplete="off"
+      [(ngModel)]="gameGenre"
+    />
+  </mat-form-field>
+</div>
+
+
+<div class="Level-container" fxLayout="row" fxLayoutAlign="center center">
+<mat-form-field>
+  <mat-select
+      placeholder="Select Game Level"
+      [(value)]="selectedLevel"
+    >
+      <mat-option *ngFor="let level of levels" [value]="level.value">
+        {{ level.viewValue }}
+      </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <br>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Question Numbers"
+        autocomplete="off"
+        [(ngModel)]="questionNumber"
+      />
+    </mat-form-field>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+<button mat-raised-button color="warn" (click)="saveGames()">Save Game</button>
+</div>
+</section>

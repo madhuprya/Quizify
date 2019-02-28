@@ -1,0 +1,9 @@
+#kafka:
+#  bootstrap-servers: localhost:9092
+#
+#kafkaconfig:
+#  topic: questions
+#  groupId: test_kafka_group
+#  partitionCount: 1
+#  retries: 3
+#  autoCommitEnabled: false

@@ -1,0 +1,236 @@
+<mat-horizontal-stepper linear id="reg">
+  <mat-step #myStep [stepControl]="formGroup1" editable="true">
+    <form [formGroup]="formGroup1">
+        <h3>Registration Form</h3>
+
+      <mat-form-field appearance="outline" class="username">
+        <mat-label for="userName">userName</mat-label>
+        <input
+          matInput
+          placeholder="userName"
+          formControlName="firstCtrl"
+          autocomplete="off"
+          [(ngModel)]="userName"
+          name="userName"
+          required
+        />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline" class="password">
+        <mat-label for="psw">Password</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="password"
+          name="psw"
+          formControlName="firstCtrl"
+          autocomplete="off"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+        <mat-hint></mat-hint>
+      </mat-form-field>
+      <br />
+
+      <mat-form-field appearance="outline" class="confirmpassword">
+        <mat-label for="psw">confirmPassword</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="Confirm password"
+          name="psw"
+          formControlName="firstCtrl"
+          autocomplete="off"
+          [(ngModel)]="confirmPassword"
+          required
+        />
+        <mat-hint></mat-hint>
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline" class="emailid">
+        <mat-label for="emailid">emailId</mat-label>
+        <input
+          matInput
+          placeholder="emailId"
+          autocomplete="off"
+          [(ngModel)]="useremailId"
+          name="emailId"
+          formControlName="firstCtrl"
+          required
+        />
+      </mat-form-field>
+      <br />
+      <mat-radio-group
+        appearance="outline"
+        class="gender"
+        formControlName="firstCtrl"
+        [(ngModel)]="genderOfUser"
+        name="gender"
+        required
+      >
+        <mat-label>Gender</mat-label>
+        <mat-radio-button value="Male">Male </mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+      <br />
+      <br />
+      <br />
+
+      <button mat-button class="nextbtn" matStepperNext>Next</button>
+    </form>
+  </mat-step>
+
+  <mat-step #myStep [stepControl]="formGroup2" optional editable="true">
+    <form [formGroup]="formGroup2">
+      <section class="container">
+          <h2>Select Topic</h2>
+
+        <mat-button-toggle class="inside" value="TvShows">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Comedy._CB1513316167_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Tvshows"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Movies">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Drama._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Movies"
+        /></mat-button-toggle>
+      </section>
+      <br />
+
+      <section class="container1">
+          <h2>Select Genres</h2>
+
+        <mat-button-toggle class="inside" value="Horror">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Horror._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Horror"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Action">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Action._CB1513316166_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Action"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Fantasy">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Fantasy._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Fantasy"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Scifi">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Sci-Fi._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Sci-FI"
+        /></mat-button-toggle>
+      
+        <mat-button-toggle class="inside" value="Romantic">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Romance._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Romantic"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Rom-com">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Comedy-Romance._CB1513316167_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Rom-com"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Drama">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Drama._CB1513316168_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Drama"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Thriller">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Thriller._CB1513316169_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Thriller"
+        /></mat-button-toggle>
+
+        <mat-button-toggle class="inside" value="Animation">
+          <img
+            src="https://m.media-amazon.com/images/G/01/IMDb/genres/Animation._CB1513316167_SX233_CR0,0,233,131_AL_.jpg"
+            alt="Adventure"
+        /></mat-button-toggle>
+
+        <br />
+      </section>
+     
+      <br />
+      <div>
+        <button mat-button class="prebtn" matStepperPrevious>Back</button>
+        <button mat-button class="nxtbtn" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step #myStep [stepControl]="formGroup3" optional editable="true">
+    <form [formGroup]="formGroup3">
+      <mat-card>
+      <h3>Details of User:</h3>
+      <section
+        class="laststep"
+        fxLayout
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        fxLayoutGap="10px"
+      >
+        <label class="step3">Username : {{ userName }}</label> <br />
+        <br />
+
+        <label class="step3">Gender : {{ genderOfUser }}</label> <br />
+        <br />
+
+        <label class="step3">emailId : {{ useremailId }}</label> <br />
+        <br />
+
+        <label class="step3"> Selected topics : {{ selectedTopics }}</label>
+
+        <ul class="step3">
+          <div class="genreinline">Selected Genres :</div>
+          <li *ngFor="let b of gen">{{ b }}</li>
+        </ul>
+
+     
+      </section>
+    </mat-card>
+      <br />
+      <br />
+      <button mat-button class="prebtn1" matStepperPrevious>Back</button> <br />
+      <br />
+
+      <button
+        mat-raised-button
+        class="submit"
+        (click)="submit($event)"
+        matStepperNext
+      >
+        Submit
+      </button>
+      <br />
+      <br />
+    </form>
+  </mat-step>
+  <mat-step #myStep [stepControl]="formGroup4" editable="false">
+    <form [formGroup]="formGroup4">
+      <p>
+        <b> Thank you for registering</b> <br /><br />
+
+        <b> You have successfully signed up as a user!</b>
+      </p>
+
+      <br />
+      <br />
+      <button
+        mat-raised-button
+        class="mat-raised-button"
+        [routerLink]="['/login']"
+      >
+        Login
+      </button>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>
